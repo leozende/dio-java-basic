@@ -1,15 +1,15 @@
 public class MyClass {
     public static void main (String [] args) {
         
-        String primeiroNome = "Leonardo";
-        String segundoNome = "Rezende";
+        String firstName = "Leonardo";
+        String lastName = "Rezende";
 
-        String nomeCompleto = nomeCompleto(primeiroNome, segundoNome);
+        String fullName = fullName(firstName, lastName);
 
-        System.out.println(nomeCompleto);
+        System.out.println(fullName);
     }
 
-    public static String nomeCompleto (String primeiroNome, String segundoNome){
-        return "Resultado do método: " + primeiroNome.concat(" ").concat(segundoNome);
+    public static String fullName (String firstName, String lastName){
+        return "Method result: " + firstName.concat(" ").concat(lastName);
     }
 }
