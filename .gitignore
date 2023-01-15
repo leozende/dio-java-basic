@@ -30,4 +30,5 @@ java-doc/.vscode/settings.json
 java-terminal/.vscode/settings.json
 .vscode/settings.json
 java-terminal/.vscode/launch.json
-java-logicacond-controlefluxo/.vscode/settings.json
+java-loops-and-arrays/.vscode/settings.json
+java-logiccondicional-fluxcontrol/.vscode/settings.json
