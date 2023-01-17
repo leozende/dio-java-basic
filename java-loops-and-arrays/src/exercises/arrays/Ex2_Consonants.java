@@ -42,7 +42,7 @@ public class Ex2_Consonants {
             if(consonant != null)
                 System.out.print(consonant + " ");
         }
-        System.out.println("Amount of consonants: " + consonantsAmount);
+        System.out.println("\nAmount of consonants: " + consonantsAmount);
 
     }
 }
