@@ -1,7 +1,5 @@
 package overload;
 
-import javax.print.event.PrintServiceAttributeListener;
-
 /**
  * Exercise class 2 about methods.
  */
