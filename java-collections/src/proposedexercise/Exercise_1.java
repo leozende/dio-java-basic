@@ -15,14 +15,13 @@ public class Exercise_1 {
     
     public static void main(String[] args) {
 
-        int monthsQuantity = 6;
-        
         Scanner scanner = new Scanner(System.in);
-
+        
         System.out.println("Creating the list for the 6 first months");
-
+        
         List<Double> temperature = new ArrayList<>();
         
+        int monthsQuantity = 6;
         for(int i = 1; i <= monthsQuantity; i++)
         {
             System.out.println("The temperature for the month " + i + " : ");
@@ -31,18 +30,25 @@ public class Exercise_1 {
 
         System.out.println(temperature);
 
-        Iterator<Double> iterator = temperature.iterator();
-        Double sum = 0d;
-        while(iterator.hasNext()){
-            Double next = iterator.next();
-            sum += next;
-        }
+        //Way to calculate average numbers:
+        // Iterator<Double> iterator = temperature.iterator();
+        // Double sum = 0d;
+        // while(iterator.hasNext()){
+        //     Double next = iterator.next();
+        //     sum += next;
+        // }
 
-        Double averageTemperature = sum/temperature.size();
+        // Double averageTemperature = sum/temperature.size();
 
-        System.out.println("Display the average temperatures : " + averageTemperature);
+        //Another Way:
+
+        Double averageTemperature = temperature.stream().mapToDouble(Double::doubleValue).average().orElse(0d);
+
+        System.out.printf("Display the average temperatures : %.1f\n", averageTemperature);
 
         System.out.println("Months above average : ");
+
+        //Way to calculate numbers above a certain number:
 
         int count = 0;
         Iterator<Double> iterator1 = temperature.iterator();
@@ -81,7 +87,12 @@ public class Exercise_1 {
 
                 System.out.println(next);
                 
-            }
+            } 
         }
+        //Another Way:
+        // System.out.print("Temperatures above average: ");
+        // temperature.stream()
+        //         .filter(t -> t > averageTemperature)
+        //         .forEach(t -> System.out.printf("%.1f ", t));
     }
 }
