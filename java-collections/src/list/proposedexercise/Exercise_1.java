@@ -1,4 +1,4 @@
-package proposedexercise;
+package list.proposedexercise;
 
 import java.util.ArrayList;
 import java.util.Iterator;
