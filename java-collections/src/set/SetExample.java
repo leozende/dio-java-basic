@@ -1,17 +1,9 @@
 package set;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.function.DoubleBinaryOperator;
+import java.util.*;
 
 public class SetExample {
     public static void main(String[] args) {
-        
         // Given a list of 7 student grades [7, 8.5, 9.3, 5, 7, 0, 3.6], do:
 
         // Set notes = new HashSet(); // before java 5
@@ -23,6 +15,7 @@ public class SetExample {
                 notes.remove(5d);
                 System.out.println(notes);
         */
+        
 
         System.out.println("Create a set and add the notes: ");
         Set<Double> notes = new HashSet<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6));
