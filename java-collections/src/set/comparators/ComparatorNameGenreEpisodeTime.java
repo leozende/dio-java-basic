@@ -1,6 +1,8 @@
-package set;
+package set.comparators;
 
 import java.util.Comparator;
+
+import set.Serie;
 
 public class ComparatorNameGenreEpisodeTime implements Comparator<Serie> {
 

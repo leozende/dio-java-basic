@@ -10,6 +10,10 @@ Series 3 = name: that '70s show, genre: comedy, timeEpisode: 25
 
 import java.util.*;
 
+import set.comparators.ComparatorEpisodeTime;
+import set.comparators.ComparatorGenre;
+import set.comparators.ComparatorNameGenreEpisodeTime;
+
 public class SetSortingExample {
     public static void main(String[] args) {
         
@@ -39,5 +43,17 @@ public class SetSortingExample {
         mySeries3.addAll(mySeries);
 
         for (Serie serie : mySeries3) System.out.println(serie.getName() + " - " + serie.getGenre() + " - " + serie.getEpisodeTime());
+
+        System.out.println("--\tGenre Order\t--");
+        Set<Serie> mySeries4 = new TreeSet<>(new ComparatorGenre());
+        mySeries4.addAll(mySeries);
+
+        for (Serie serie : mySeries4) System.out.println(serie.getName() + " - " + serie.getGenre() + " - " + serie.getEpisodeTime());
+
+        System.out.println("--\tEpisode Time Order\t--");
+        Set<Serie> mySeries5 = new TreeSet<>(new ComparatorEpisodeTime());
+        mySeries5.addAll(mySeries);
+
+        for (Serie serie : mySeries5) System.out.println(serie.getName() + " - " + serie.getGenre() + " - " + serie.getEpisodeTime());
     }
 }
